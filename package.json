@@ -1,0 +1,135 @@
+{
+  "_args": [
+    [
+      "rn-bitcoinjs-lib@5.0.5-1",
+      "/Users/andreystehno/Downloads/expo-web3"
+    ]
+  ],
+  "_from": "rn-bitcoinjs-lib@5.0.5-1",
+  "_id": "rn-bitcoinjs-lib@5.0.5-1",
+  "_inBundle": false,
+  "_integrity": "sha512-ujyIzWefLkfA6o0p80XE7yfly0znrLYIQ+/WE0WuuqTV3S7sBAKB93ryYVsks9JGKZKS+cljURwXzQjLi5qeOQ==",
+  "_location": "/rn-bitcoinjs-lib",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "rn-bitcoinjs-lib@5.0.5-1",
+    "name": "rn-bitcoinjs-lib",
+    "escapedName": "rn-bitcoinjs-lib",
+    "rawSpec": "5.0.5-1",
+    "saveSpec": null,
+    "fetchSpec": "5.0.5-1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/rn-bitcoinjs-lib/-/rn-bitcoinjs-lib-5.0.5-1.tgz",
+  "_spec": "5.0.5-1",
+  "_where": "/Users/andreystehno/Downloads/expo-web3",
+  "browser": {
+    "crypto": "react-native-crypto",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "vm": "vm-browserify"
+  },
+  "bugs": {
+    "url": "https://github.com/coreyphillips/rn-bitcoinjs-lib/issues"
+  },
+  "dependencies": {
+    "@types/node": "10.12.18",
+    "bech32": "^1.1.2",
+    "bip32": "^2.0.3",
+    "bip66": "^1.1.0",
+    "bitcoin-ops": "^1.4.0",
+    "bs58check": "^2.0.0",
+    "create-hash": "^1.1.0",
+    "create-hmac": "^1.1.3",
+    "merkle-lib": "^2.0.10",
+    "pushdata-bitcoin": "^1.0.1",
+    "randombytes": "git+https://github.com/crypto-browserify/randombytes.git",
+    "react-native-randombytes": "^3.5.3",
+    "tiny-secp256k1": "^1.1.1",
+    "typeforce": "^1.11.3",
+    "varuint-bitcoin": "^1.0.4",
+    "wif": "^2.0.1"
+  },
+  "description": "Client-side Bitcoin JavaScript library",
+  "devDependencies": {
+    "bip39": "^2.3.0",
+    "bip65": "^1.0.1",
+    "bip68": "^1.0.3",
+    "bn.js": "^4.11.8",
+    "bs58": "^4.0.0",
+    "dhttp": "^3.0.0",
+    "hoodwink": "^2.0.0",
+    "minimaldata": "^1.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "prettier": "1.16.4",
+    "proxyquire": "^2.0.1",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.16.0",
+    "typescript": "3.2.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "src",
+    "types"
+  ],
+  "homepage": "https://github.com/coreyphillips/rn-bitcoinjs-lib#readme",
+  "keywords": [
+    "bitcoinjs",
+    "bitcoin",
+    "browserify",
+    "javascript",
+    "bitcoinjs"
+  ],
+  "license": "MIT",
+  "main": "./src/index.js",
+  "name": "rn-bitcoinjs-lib",
+  "react-native": {
+    "crypto": "react-native-crypto",
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "vm": "vm-browserify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreyphillips/rn-bitcoinjs-lib.git"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p ./tsconfig.json && npm run formatjs",
+    "clean": "rimraf src types",
+    "coverage": "npm run build && npm run nobuild:coverage",
+    "coverage-html": "npm run build && npm run nobuild:coverage-html",
+    "coverage-report": "npm run build && npm run nobuild:coverage-report",
+    "format": "npm run prettier -- --write",
+    "format:ci": "npm run prettier -- --check && npm run prettierjs -- --check",
+    "formatjs": "npm run prettierjs -- --write > /dev/null 2>&1",
+    "gitdiff:ci": "npm run build && git diff --exit-code",
+    "integration": "npm run build && npm run nobuild:integration",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "nobuild:coverage": "nyc --check-coverage --branches 90 --functions 90 --lines 90 mocha",
+    "nobuild:coverage-html": "nyc report --reporter=html",
+    "nobuild:coverage-report": "nyc report --reporter=lcov",
+    "nobuild:integration": "mocha --timeout 50000 test/integration/",
+    "nobuild:unit": "mocha",
+    "prettier": "prettier 'ts_src/**/*.ts' --ignore-path ./.prettierignore",
+    "prettierjs": "prettier 'src/**/*.js' --ignore-path ./.prettierignore",
+    "test": "npm run build && npm run format:ci && npm run lint && npm run nobuild:coverage",
+    "unit": "npm run build && npm run nobuild:unit"
+  },
+  "types": "./types/index.d.ts",
+  "version": "5.0.5-1"
+}
